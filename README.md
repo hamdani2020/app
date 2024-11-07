@@ -41,3 +41,8 @@ docker build -t hello .
 docker run -p 8000:8000 hello
 ```
 The application will be available at http://127.0.0.0.1:8000
+
+## Using Docker Compose
+```
+docker-compose up
+```

@@ -1,0 +1,16 @@
+version: '3.9'
+
+
+services:
+  # Defines the main service for the Django application
+  # Builds the Docker image using Dockfile in the current directory
+  # Starts the Django server
+  # Mounts the current directory on the host to /app in the container, allowing code changes without rebuilding
+  # Maps port 8000 on the host to port 8000 in the container, making the app accessible at http://127.0.0.0.1:8000
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
