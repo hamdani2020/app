@@ -35,14 +35,14 @@ pip install -r requirements.txt
 1. Build the Docker image:
 
 ```bash
-docker build -t hello .
+docker build -t app .
 
 ```
 
 2. Run the Docker container
 
 ```bash
-docker run -p 8000:8000 hello
+docker run -p 8000:8000 app-web
 ```
 
 ![Contaier](./resources/docker-container-running.png)
